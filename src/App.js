@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import UserTable from "./components/Users";
+import Images from "./components/Images";
 import { getUsers } from "./api/users";
 import "./App.css";
 import { connect } from "react-redux";
@@ -46,6 +47,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <UserTable users={users} />
+        <Images />
       </div>
     );
   }
