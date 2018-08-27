@@ -16,13 +16,3 @@ export const fetchUser =  test => {
     }
 };
 
-export const fetchUserRequest = () => ({
-  type: types.FETCH_REQUEST
-});
-
-export const fetchUserSuccess = users => ({
-  type: types.FETCH_SUCCESS,
-  payload: {
-    users
-  }
-});
