@@ -1,0 +1,16 @@
+matrix:
+  include:
+    - language: node_js
+      name: Upload Heroku [artificial-inteligence-project]
+      sudo: false
+      node_js:
+        - "8.11.1"
+      branches:
+        only:
+          - master
+      script:
+        # Add upload heroku logic...
+        - npm install
+        - npm run build
+        - git remote add heroku https://heroku:"$heroku"@git.heroku.com/artificial-inteligence-website.git
+        - git push -f heroku master
